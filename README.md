@@ -4,7 +4,7 @@ Code of application is publicated in independent applications below.
 
 ## Live view
 You can check the application in this [link](https://joinjobs.herokuapp.com/)
-
+Application is hosted on free platform Heroku so it need some time to run it.
 
 ## Technology Stack
   - JavaScript, Node.JS, Express.JS
