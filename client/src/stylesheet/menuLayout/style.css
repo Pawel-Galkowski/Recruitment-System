@@ -1,0 +1,225 @@
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menubar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 100%;
+}
+
+#mobile-button {
+  background-color: var(--dark-color);
+  color: white;
+  width: 7%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#mobile-button:focus {
+  outline: none;
+}
+
+.show {
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+}
+
+.hidden {
+  display: none;
+  transform: translateX(-200px);
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  -o-transform: translateX(-200px);
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#sidebarToggle {
+  display: none;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #212529;
+  border-left: #212529;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+  text-decoration: none;
+}
+
+.nav-link.disabled {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: default;
+}
+
+#layoutSidenav_nav {
+  height: 100%;
+}
+
+@media (min-width: 701px) {
+  #layoutSidenav_nav {
+    width: 220px;
+  }
+  #mobile-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menubar #blockID {
+    display: none;
+  }
+  .menubar .show {
+    width: 100%;
+    width: 70vw;
+    min-width: 250px;
+  }
+  .menubar .show #layoutSidenav_nav {
+    width: 100%;
+  }
+  .menubar .show #layoutSidenav_nav .sidenav {
+    width: 100%;
+  }
+  #simpleMenuBar {
+    height: 10%;
+  }
+}
+
+.nav .nav-link .nav-link-icon,
+.sidenav-menu .nav-link .nav-link-icon {
+  margin-right: 0.5rem;
+}
+
+.sidenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 1rem 1rem 1rem;
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sidenav .sidenav-menu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+.sidenav .sidenav-menu .nav {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.sidenav .sidenav-menu .nav .sidenav-menu-heading {
+  color: rgba(255, 255, 255, 0.25);
+  padding: 1.75rem 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sidenav .sidenav-menu .nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem 0;
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sidenav .sidenav-menu .nav .nav-link .nav-link-icon,
+.sidenav .sidenav-menu .nav .nav-link .sidenav-collapse-arrow {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sidenav .sidenav-menu .nav .nav-link .nav-link-icon {
+  font-size: 0.9rem;
+}
+
+.sidenav .sidenav-menu .nav .nav-link .sidenav-collapse-arrow {
+  display: inline-block;
+  margin-left: auto;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+}
+
+.sidenav .sidenav-menu .nav .nav-link.collapsed .sidenav-collapse-arrow {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sidenav .sidenav-menu .nav .nav-link:hover {
+  color: #fff;
+}
+
+.sidenav .sidenav-menu .nav .nav-link.active {
+  color: #fff;
+}
+
+.sidenav .sidenav-menu .nav .nav-link.active .nav-link-icon {
+  color: #fff;
+}
+
+.sidenav .sidenav-menu .nav .sidenav-menu-nested {
+  margin-left: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sidenav .sidenav-menu .menu-bottom {
+  bottom: 0px;
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */

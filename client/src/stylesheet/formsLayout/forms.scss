@@ -1,0 +1,278 @@
+.floatLeft {
+  float: left;
+}
+
+.formItem {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  height: auto;
+  padding: 1rem 0;
+  max-height: 400px;
+  min-height: 100px;
+  margin: 0.7rem auto;
+
+  div:first-child {
+    text-align: center;
+    border-right: 1px solid gray;
+    height: 100%;
+    position: relative;
+    h3 {
+      width: 100%;
+    }
+  }
+}
+
+.marginTop-2 {
+  margin-top: 2rem;
+}
+
+.marginUpDown-1 {
+  margin: 1rem 0;
+}
+
+.formItemBig {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  height: auto;
+  min-height: 100px;
+  margin: 0.7rem auto;
+  padding: 1rem 0;
+
+  div:first-child {
+    text-align: center;
+    border-right: 1px solid gray;
+    height: 100%;
+    position: relative;
+    h3 {
+      width: 100%;
+    }
+  }
+}
+
+.sectionLeftPadding ol {
+  padding: 1rem 0;
+  li {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+.table-center {
+  margin: 0 auto;
+  text-align: center;
+
+  .information-table {
+    margin: 1% auto 5rem auto;
+    width: 100%;
+    border-spacing: 0;
+    max-width: 1200px;
+
+    th,
+    td {
+      padding: 1rem;
+      text-align: left;
+      width: 20%;
+      border-left: 1px solid black;
+      border-right: 0px;
+      border-bottom: 1px solid black;
+      border-top: 0px;
+      margin: 0;
+      position: relative;
+
+      .btn {
+        padding: 0;
+        margin: 0;
+      }
+
+      i {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    th:last-child,
+    td:last-child,
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 5%;
+      text-align: center;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 10%;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: 1px solid black;
+    }
+
+    td:last-child {
+      border-left: 0;
+    }
+
+    th {
+      text-align: center;
+      background: #ccc;
+      border-top: 1px solid black;
+    }
+  }
+}
+
+.form-box {
+  input {
+    margin-bottom: 0.2rem;
+  }
+
+  input[type="submit"] {
+    margin: 0.8rem auto 1rem auto;
+  }
+}
+@media (min-width: 769px) {
+  .post div:first-child h1,
+  .formItemBig div:first-child h3,
+  .formItem div:first-child h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-box {
+    h1 {
+      text-align: left;
+      font-size: 1.2rem;
+    }
+    text-align: center;
+  }
+  .table-center .information-table th,
+  .table-center .information-table th:last-child,
+  .table-center .information-table td:last-child {
+    border: 0;
+  }
+
+  .information-table.mobileScreen {
+    th {
+      border-right: 1px solid black;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid black !important;
+    }
+
+    th:last-of-type,
+    td:last-of-type {
+      border-bottom: 0;
+    }
+
+    .strong-bottom {
+      border-bottom: 5px solid gray;
+    }
+  }
+
+  .mobile-center {
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .formsMainText {
+    font-size: 1.2rem;
+  }
+
+  .forms {
+    .formItem {
+      display: block;
+      text-align: center;
+
+      div:first-child {
+        border: none;
+      }
+    }
+  }
+
+  .formItem {
+    max-height: 100vh;
+    overflow-y: scroll;
+    text-align: center;
+
+    .hide-sm {
+      display: none;
+    }
+
+    div {
+      margin: 0.5rem 0;
+      display: block;
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        margin: 0.2rem 0;
+      }
+
+      &:first-child {
+        border: none;
+      }
+    }
+  }
+
+  .post div:first-child {
+    border-right: none;
+  }
+
+  .sectionLeftPadding {
+    .post {
+      display: block;
+      text-align: center;
+      max-height: 100vh;
+      height: auto;
+
+      .sectionLeftPadding {
+        text-align: left;
+      }
+    }
+  }
+
+  .formItemBig {
+    display: block;
+    text-align: center;
+
+    div:first-child {
+      border-right: none;
+      border-bottom: 1px solid gray;
+      margin: 0.5rem 0;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    h4 {
+      margin: 0.2rem 0;
+    }
+  }
+
+  .marginTop-2 .formItem {
+    display: block;
+  }
+}
