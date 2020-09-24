@@ -1,6 +1,5 @@
-﻿# Recruitment-System
-Recruitment platform created with MERN stack - full source code is not available.
-Code of application is publicated in independent applications below.
+# Recruitment-System
+Recruitment platform created with MERN stack.
 
 ## Live view
 You can check the application in this [link](https://joinjobs.herokuapp.com/)<br/>
